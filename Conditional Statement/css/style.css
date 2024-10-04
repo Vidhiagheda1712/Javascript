@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 1400px;
+    margin: 0px auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+/* repetition-logic start  */
+
+.logic {
+    padding-top: 60px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.logic h2 {
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.logic h3 {
+    padding: 30px 0px 20px 0px;
+    font-size: 28px;
+    color: gray;
+    text-transform: uppercase;
+    border-bottom: 2px solid gray;
+
+    text-align: center;
+}
+
+.logic h4 {
+    padding: 12px;
+    font-size: 28px;
+    color: #087d8e;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+/* repetation logic end */

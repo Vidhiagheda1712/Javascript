@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-6</title>
+
+    <!-- style css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- style css link end -->
+</head>
+
+<body>
+
+    <!-- input user pogram start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Javascript program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following.</h2>
+                    <h3>input user</h3>
+                    <h4 id="pr"></h4>
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input user pogram end -->
+
+
+    <!-- script start -->
+
+    <script type="text/javascript">
+        // Javascript program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following.
+
+        // input usere program start 
+
+        alert("Enter five subjects mark and Calculate percentage and grade according");
+
+        var Physics = parseInt(prompt("Enter your physics mark :- "));
+        var Chemistry = parseInt(prompt("Enter your Chemistry mark :- "));
+        var Biology = parseInt(prompt("Enter your Biology mark :- "));
+        var Mathematics = parseInt(prompt("Enter your Mathematics mark :- "));
+        var Computer = parseInt(prompt("Enter your Computer mark :- "));
+
+        total = Physics + Chemistry + Biology + Mathematics + Computer ;
+
+        mark = total / 5 ;
+
+        console.log(mark + "%" );
+        document.getElementById('pr').innerHTML=  mark + "%"  ;
+
+        if(mark >= 90 && mark <= 100) {
+            console.log('grade a') ;
+            document.getElementById("test").innerHTML = " With Grade 'A' " ;
+        }
+
+        else if (mark >= 80 && mark <= 89) {
+            console.log('grade b') ;
+            document.getElementById("test").innerHTML = " With Grade 'b' " ;
+        }
+
+        else if (mark >= 70 && mark <= 79) {
+            console.log('grade c') ;
+            document.getElementById("test").innerHTML = " With Grade 'c' " ;
+        }
+
+        else if (mark >= 60 && mark <= 69) {
+            console.log('grade d') ;
+            document.getElementById("test").innerHTML = " With Grade 'd' " ;
+        }
+
+        else if (mark >= 50 && mark <= 59) {
+            console.log('grade d') ;
+            document.getElementById("test").innerHTML = " With Grade 'e' " ;
+        }
+
+        else if (mark >= 40 && mark <= 49) {
+            console.log('grade d') ;
+            document.getElementById("test").innerHTML = " With Grade 'f' " ;
+        }
+    
+        else {
+            console.log("fail");
+        }
+
+        // input usere program end
+
+        // Javascript program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following.
+
+    </script>
+
+    <!-- script end -->
+
+</body>
+
+</html>
