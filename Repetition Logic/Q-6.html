@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-6</title>
+    <title>Q-3</title>
     <!-- css link start  -->
     <link rel="stylesheet" href="css/style.css">
     <!-- css link end -->
@@ -20,34 +20,36 @@
                 <div class="logic">
                     <h2>Do While Loop</h2>
                     <h3>input user</h3>
+
                 </div>
             </div>
         </div>
     </section>
     <!-- input user program end -->
     <!-- script start  -->
-    <script type="text/javascript">
-        // print sum of all numbers 1 to N using do while loop 
-        alert(`sum of all numbers 1 to N using do while loop `);
-
-        var n = parseInt(prompt("Enter Any Number :"));
+    <script>
+        // print odd numbers using do while loop 
+        alert(`Print Odd Numbers`);
+        var num = parseInt(prompt("Enter any number :"));
         var i = 1;
-        var sum = 0;
-        document.write(`<h2>Numbers</h2>`);
+        document.write(`<h2>Odd Numbers</h2>`);
+
+    
+
         do {
-            console.log(`${i}`);
+            if (i % 2 == 1) {
+                console.log(`Odd Numbers :- ${i}`);
 
-            document.write(`<h4>${i}</h4>`);
-            document.write(`<br>`);
+                document.write(`<h4>${i}</h4>`);
+                document.write(`<br>`);
+              
 
-            sum += i;
+
+            }
             i++;
 
         }
-        while (i <= n)
-
-
-        document.write(`<h2>The Sum Of All Numbers  :- ${sum}</h2>`);
+        while (i <= num)
 
     </script>
     <!-- script end  -->
