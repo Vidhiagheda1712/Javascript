@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="UDF">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Take Nothing Return Nothing</h2>
+                    <h2>program to Find Which Number is Greater...</h2>
+                    <h3>input user</h3>
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+
+        //program to find which number is greter in 4 numbers using nested if else. 
+        alert(`JavaScript program to find which number is greter in 4 numbers using nested if else.`);
+        //take nothing return nothing
+
+        var a = parseInt(prompt("Enter value of A :- "));
+        var b = parseInt(prompt("Enter value of B :- "));
+        var c = parseInt(prompt("Enter value of C :- "));
+        var d = parseInt(prompt("Enter value of D :- "));
+        var e = parseInt(prompt("Enter value of E :- "));
+
+        // function start
+        function number() {
+
+
+            if (a > b) {
+                if (a > c) {
+                    if (a > d) {
+                        if (a > e) {
+                            console.log("value number " + "a ( " + a + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "a ( " + a + " ) is big... ";
+                        }
+                        else {
+                            console.log("value number " + "e ( " + e + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "d ( " + e + " ) is big... ";
+                        }
+                    }
+                }
+            }
+
+            else {
+                if (b > c) {
+                    if (b > d) {
+                        if (b > e) {
+                            console.log("value number " + "b ( " + b + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "b ( " + b + " ) is Big... ";
+                        }
+                        else {
+                            console.log("value number " + "e ( " + e + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "e ( " + e + " ) is Big.. ";
+                        }
+                    }
+                }
+                else {
+                    if (c > d) {
+                        if (c > e) {
+                            console.log("value number " + "c ( " + c + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "c ( " + c + " ) is Big ";
+                        }
+                        else {
+                            console.log("value number " + "d ( " + e + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "e ( " + e + " ) is Big ";
+                        }
+                    }
+                    else {
+                        if (d > e) {
+                            console.log("value number " + "d ( " + d + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "d ( " + d + " ) is Big ";
+                        }
+                        else {
+                            console.log("value number " + "e ( " + e + " ) is big");
+                            document.getElementById('test').innerHTML = " value number " + "e ( " + e + " ) is Big ";
+                        }
+                    }
+                }
+            }
+        }
+
+        //function end 
+        number();
+    </script>
+    <!-- script start  -->
+
+</body>
+
+</html>
