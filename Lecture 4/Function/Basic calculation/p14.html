@@ -1,0 +1,24 @@
+<script>
+    // TNRS
+    function salary() {
+
+        hra = (bs * hra) / 100;
+        da = (bs * da) / 100;
+        ta = (bs * ta) / 100;
+        var ans = bs + hra + da + ta;
+     
+        document.write(`<h2>Base Salary :- ${ans}</h2>`);
+        return ans;
+
+    }
+    var bs = parseInt(prompt(`Enter BS :-`));
+    var hra = parseInt(prompt(`Enter HRA :-`));
+    var da = parseInt(prompt(`Enter DA :-`));
+    var ta = parseInt(prompt(`Enter TA :-`));
+
+    salary();
+
+
+
+
+</script>
