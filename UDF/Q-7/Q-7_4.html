@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-7_4</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="UDF">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Take Something Return Something</h2>
+                    <h2> program to find which number is greter in 3 numbers.....</h>
+                        <h3>input user</h3>
+                        <h4 id="test"></h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // program to find which number is greter in 3 numbers using nested if else.
+        alert(`JavaScript program to find which number is greter in 3 numbers using nested if else.`);
+        // Take Something Return Something
+        var a = parseInt(prompt("Enter value of A :- "));
+        var b = parseInt(prompt("Enter value of B :- "));
+        var c = parseInt(prompt("Enter value of C :- "));
+
+        // function start
+        function number(a, b, c) {
+
+            if (a > b) {
+                if (a > c) {
+                    return " value number " + "a ( " + a + " ) is big... ";
+
+                }
+                else {
+                    return "value number " + "c ( " + c + " ) is big... ";
+
+                }
+
+            }
+            else {
+                if (b > c) {
+                    return "value number " + "b ( " + b + " ) is big... ";
+
+
+
+                }
+                else {
+                    return "value number " + "c ( " + c + " ) is big... ";
+
+
+
+                }
+            }
+        }
+        document.getElementById('test').innerHTML = number(a, b, c);
+
+        // function end
+
+    </script>
+    <!-- script start  -->
+
+</body>
+
+</html>

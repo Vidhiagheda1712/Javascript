@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-6_1</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="UDF">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Take Nothing Return Nothing</h2>
+                    <h2>Program to perform a swapping of two variables.....</h>
+                        <h3>input user</h3>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        //Program to perform a swapping of two variables.
+        alert(`JavaScript Program to perform a swapping of two variables.`);
+        // take nothing return nothing
+
+        // function start
+        function swap() {
+
+            document.write(`<h4>- Before Swapping - </h4>`);
+            document.write(`<h4> A :- ${a} </h4>`);
+            document.write(`<h4> B :- ${b}</h4>`);
+
+            var swap = a;
+            a = b;
+            b = swap;
+            document.write(`<h4>- After Swapping - </h4>`);
+            document.write(`<h4> A :- ${a} </h4>`);
+            document.write(`<h4> B :- ${b}</h4>`);
+
+        }
+        var a = parseInt(prompt(`Enter The Value Of A :-`));
+        var b = parseInt(prompt(`Enter The Value Of B :-`));
+        swap();
+
+
+        // function end
+    </script>
+    <!-- script start  -->
+
+</body>
+
+</html>
