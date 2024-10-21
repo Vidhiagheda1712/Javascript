@@ -55,12 +55,19 @@
         }
 
         var value = parseInt(prompt(`search array element to find index :-`));
+        var notIndex =0;
         document.write(`<h2> Element :- ${value}</h2>`);
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == value) {
                 document.write(`<h2>Index of Element :- ${i}</h2>`);
+                notIndex = 1;
+                break;
 
             }
+        }
+        if(notIndex ==0){
+            document.write(`<h2> This value is Not Found...</h2>`);
+
         }
 
 
