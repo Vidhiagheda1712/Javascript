@@ -32,7 +32,7 @@
         // Remove duplicate element in array.
         alert(`Remove duplicate element in array.`);
         var size = parseInt(prompt(`Enter Array Size :-`));
-        const arr = [size];
+        var arr = [size];
 
         document.write(`<h2>Array Elements</h2>`);
 
@@ -40,16 +40,20 @@
             arr[i] = parseInt(prompt(`Enter Element ${i + 1} :-`));
             document.write(`<h4>${arr[i]}</h4>`);
         }
-        document.write(`<h2>Duplicate Elements of Array</h2>`);
+        document.write(`<h2>Remove Duplicate Elements of Array</h2>`);
         for (var i = 0; i < size; i++) {
             for (var j = i + 1; j < size; j++) {
-                if (arr[i] != arr[j]) {
-                    document.write(`<h4>${arr[i]}</h4>`)
-
-
+                if (arr[i] == arr[j]) {
+                  arr[j]= null;    
                 }
             }
         }
+        for (var i = 0; i < size; i++) {
+         if(arr[i] != null){
+              document.write(`<h4>${arr[i]}</h4>`); 
+           }
+        }
+       
     </script>
     <!-- script end  -->
 
