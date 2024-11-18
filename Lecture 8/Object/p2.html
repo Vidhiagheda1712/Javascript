@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1 align ="center">Details Of Students</h1>
+
+    <table  align ="center" border="1" cellpadding="20">
+         <thead>
+            <tr>
+                <th>No.</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Country</th>
+                <th>state</th>
+                <th>City</th>
+                <th>Course</th>
+                <th>Branch</th>
+                <th>Address</th>
+                <th>God</th>
+                
+            </tr>
+        </thead>
+        <tbody id="tbl">
+
+        </tbody>
+    </table>
+    
+</body>
+
+
+<!-- script start  -->
+ <script>
+    const details = [
+{
+    No : 1 ,
+    FirstName : "Vidhi",
+    LastName : "Agheda",
+    Age : 21,
+    Email : "aghedavidhi1712@gmail.com",
+    Contact : "9724435168",
+    Country : "India",
+    state : "Gujarat",
+    City: "Surat",
+    Course : "Full Stack Developement",
+    Branch : "Red & White Multimedia",
+    Address : "xyz nagar",
+    God : [
+        "Mahadev" , "Krishna","Brahma","Vishnu"
+    ]
+   
+},
+{    No : 2 ,
+    FirstName : "Ayushi",
+    LastName : "Gorasiya",
+    Age : 18,
+    Email : "ayushigorasiya287@gmail.com",
+    Contact : "8356954231",
+    Country : "India",
+    state : "Gujarat",
+    City: "Surat",
+    Course : "Full Stack Developement",
+    Branch : "Red & White Multimedia",
+    Address : "Sai Shraddhaa",
+    God : [
+        "Mahadev" , "Krishna","Brahma","Vishnu"
+    ]
+},
+{
+     No : 3,
+    FirstName : "Krisha",
+    LastName : "Mangukiya",
+    Age : 20,
+    Email : "krishamagukiya0112@gmail.com",
+    Contact : "9725656321",
+    Country : "India",
+    state : "Gujarat",
+    City: "Surat",
+    Course : "Full Stack Developement",
+    Branch : "Red & White Multimedia",
+    Address : "Matrushree Farm",
+    God : [
+        "Mahadev" , "Krishna","Brahma","Vishnu"
+    ]
+}
+]
+ 
+ let table = "";
+ details.map((v,i)=>{
+    table += `
+          
+           <tr>
+             <td>${v.No}</td>
+             <td>${v.FirstName}</td>
+             <td>${v.LastName}</td>
+             <td>${v.Age}</td>
+             <td>${v.Email}</td>
+             <td>${v.Contact}</td>
+             <td>${v.Country}</td>
+             <td>${v.state}</td>
+             <td>${v.City}</td>
+             <td>${v.Course}</td>
+             <td>${v.Branch}</td>
+             <td>${v.Address}</td>
+             <td>
+                <table border ="1" cellpadding ="10">`
+              
+                v.God.map((g,i)=>{
+                table += `<tr>
+                        <td>${++i}</td>
+                        <td>${g}</td>
+                    </tr>`
+             })
+            table += `</table>
+               </td>
+               </tr>`
+ })
+
+  document.getElementById ("tbl").innerHTML = table;
+ </script>
+
+
+<!-- script  end  -->
+</html>

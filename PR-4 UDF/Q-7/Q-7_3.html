@@ -42,40 +42,32 @@
 
             if (a > b) {
                 if (a > c) {
-                    console.log("value number " + "a ( " + a + " ) is big");
-                    document.getElementById('test').innerHTML = " value number " + "a ( " + a + " ) is big... ";
+                    return "value number " + "a ( " + a + " ) is big... ";
 
                 }
                 else {
-                    console.log("value number " + "c ( " + c + " ) is big");
-                    document.getElementById('test').innerHTML = " value number " + "c ( " + c + " ) is big... ";
-
+                    return "value number " + "c ( " + c + " ) is big... ";
                 }
 
             }
             else {
                 if (b > c) {
-                    console.log("value number " + "b ( " + b + " ) is big");
-                    document.getElementById('test').innerHTML = " value number " + "b ( " + b + " ) is big... ";
+                    return "value number " + "b ( " + b + " ) is big... ";
 
 
                 }
                 else {
-                    console.log("value number " + "c ( " + c + " ) is big");
-                    document.getElementById('test').innerHTML = " value number " + "c ( " + c + " ) is big... ";
+                    return "value number " + "c ( " + c + " ) is big... ";
 
 
                 }
 
             }
-            return number;
-
-
-
         }
+        document.getElementById('test').innerHTML = number();
 
         // function end
-        number();
+
     </script>
     <!-- script start  -->
 

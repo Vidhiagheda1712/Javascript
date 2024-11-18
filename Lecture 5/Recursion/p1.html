@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    function sum() {
+        var ans = a + b;
+        document.write(`<h2>Sum :- ${ans}</h2>`);
+        mul();
+
+    }
+    function mul() {
+        var ans = a * b;
+        document.write(`<h2>Multiplication :- ${ans}</h2>`);
+        sub();
+
+    }
+    function sub() {
+        var ans = a - b;
+        document.write(`<h2>Subtraction :- ${ans}</h2>`);
+        div();
+
+    }
+    function div() {
+        var ans = a / b;
+        document.write(`<h2>Division :- ${ans}</h2>`);
+
+    }
+    var a = parseInt(prompt(`Enter A :-`));
+    var b = parseInt(prompt(`Enter B :-`));
+    sum();
+</script>

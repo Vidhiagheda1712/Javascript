@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Slider</title>
+</head>
+
+<body>
+    <h2 align="center">View User</h2>
+    <h2 align="center">Salary Wise Filter Record</h2>
+
+
+    <div align="center">
+
+        <select onchange="filtersalary()" id="salary">
+            <option>--Select Salary--</option>
+            <option value="20000">20000</option>
+            <option value="22000">22000</option>
+            <option value="25000">25000</option>
+            <option value="30000">30000</option>
+        </select>
+    </div><br>
+
+
+    <table border="1" cellpadding="10" align="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>City</th>
+                <th>Salary</th>
+                <th>Degi.</th>
+                <th>Dep.</th>
+            </tr>
+        </thead>
+        <tbody id="users">
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+<script>
+
+    const details = [
+        {
+            id: 1,
+            name: "ashish",
+            email: "ashu@gmail.com",
+            phone: "1121212",
+            city: "surat",
+            salary: "20000",
+            degi: "senior",
+            dep: "programming",
+        },
+        {
+            id: 2,
+            name: "hari",
+            email: "hari@gmail.com",
+            phone: "5454545",
+            city: "surat",
+            salary: "22000",
+            degi: "junior",
+            dep: "ui/ux",
+
+        },
+        {
+            id: 3,
+            name: "raj",
+            email: "raj@gmail.com",
+            phone: "454545",
+            city: "vadodara",
+            salary: "25000",
+            degi: "junior",
+            dep: "bde",
+
+        },
+        {
+            id: 4,
+            name: "deep",
+            email: "deep@gmail.com",
+            phone: "565656",
+            city: "vapi",
+            salary: "30000",
+            degi: "tl",
+            dep: "webdesign",
+
+        },
+        {
+            id: 5,
+            name: "jay",
+            email: "jay@gmail.com",
+            phone: "5565656",
+            city: "rajkot",
+            salary: "20000",
+            degi: "senior",
+            dep: "programming",
+
+        },
+        {
+            id: 6,
+            name: "ajay",
+            email: "ajay@gmail.com",
+            phone: "5565656",
+            city: "vapi",
+            salary: "25000",
+            degi: "manager",
+            dep: "ui/ux",
+        }
+
+    ]
+
+    let filterData = [];
+
+    const viewRecord = (data) => {
+
+        let tbl = "";
+        if (data) {
+            data.map((val, index) => {
+                tbl += `
+                        <tr>
+
+                            <td>${val.id}</td>
+                            <td>${val.name}</td>
+                            <td>${val.email}</td>
+                            <td>${val.phone}</td>
+                            <td>${val.city}</td>
+                            <td>${val.salary}</td>
+                            <td>${val.degi}</td>
+                            <td>${val.dep}</td>
+                      <tr>`
+
+            })
+            filterData = tbl;
+            document.getElementById("users").innerHTML = filterData;
+        }
+        else {
+            details.map((val, index) => {
+                tbl += `
+                        <tr>
+
+                            <td>${val.id}</td>
+                            <td>${val.name}</td>
+                            <td>${val.email}</td>
+                            <td>${val.phone}</td>
+                            <td>${val.city}</td>
+                            <td>${val.salary}</td>
+                            <td>${val.degi}</td>
+                            <td>${val.dep}</td>
+                        </tr>
+                    `
+            })
+            filterData = tbl;
+            document.getElementById("users").innerHTML = filterData;
+        }
+
+    }
+    viewRecord();
+    // salary wise filter record
+    const filtersalary = () => {
+        let salary = document.getElementById('salary').value;
+
+
+        let record = details.filter((val) => {
+            return val.salary === salary
+        })
+        viewRecord(record);
+
+    }
+
+
+
+</script>
