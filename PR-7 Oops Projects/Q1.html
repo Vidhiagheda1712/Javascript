@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- css link end  -->
+</head>
+
+<body>
+    <!-- input user program start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Person's Details</h2>
+                    <h4 id="person"></h4>
+                    <h4 id="dtl"></h4>
+                    <h4 id="prn"></h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+
+    <script type="text/javascript">
+
+        class Person {
+            constructor(name, age, country) {
+                this.name = name;
+                this.age = age;
+                this.country = country;
+
+            }
+
+            Display() {
+
+                document.write(`<h4>Name :- ${this.name}</h4>`);
+                document.write(`<h4>Age :- ${this.age}</h4>`);
+                document.write(`<h4>Country :- ${this.country}</h4>`);
+
+            }
+        }
+
+        let details1 = new Person("xyz", 25, "USA");
+        let details2 = new Person("pqr", 20, "INDIA");
+
+        details1.Display();
+        details2.Display();
+    </script>
+    <!-- script start  -->
+</body>
+
+</html>
