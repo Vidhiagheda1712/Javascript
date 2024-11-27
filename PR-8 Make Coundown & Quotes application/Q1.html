@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Coundown & Quotes application</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2>Make Coundown & Quotes application</h2>
+    <div class="main" align="center">
+        <h2 id="countup" onclick="countup()"><button>+</button></h2>
+        <h2 id="count" onclick="count()"><button id="countValue">0</button></h2>
+        <h2 id="countdown" onclick="countdown()"><button>-</button></h2>
+    </div>
+    <input type="reset" value="Reset" name="Reset" class="reset" onclick="reset()">
+
+    <script type="text/javascript">
+        let countValue = 0;
+        function Display() {
+            document.getElementById("countValue").innerHTML = countValue;
+        }
+
+        function countup() {
+            countValue++;
+            Display();
+        }
+        function countdown() {
+            countValue--;
+            Display();
+        }
+        function reset() {
+            countValue = 0;
+            Display();
+        }
+    </script>
+</body>
+
+</html>
