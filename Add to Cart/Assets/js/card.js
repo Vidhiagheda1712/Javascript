@@ -22,6 +22,7 @@ const viewCart = () => {
 }
 viewCart();
 const editCart = (id) => {
+     let carts = JSON.parse(localStorage.getItem('carts'));
 
     let qty = document.getElementById(`qty_${id}`).value;
 
