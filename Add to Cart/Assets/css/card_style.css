@@ -1,0 +1,195 @@
+.container {
+    display: flex;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.row {
+    width: 100%;
+
+}
+a{
+    text-decoration: none;
+    color: goldenrod;
+}
+.header {
+    height: 92px;
+    width: 100%;
+    background-color: goldenrod;
+    border-radius: 3px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px;
+
+}
+
+
+.addtocard {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.head {
+    background-color: goldenrod;
+    border-radius: 3px;
+    height: 60px;
+    padding: 10px;
+    margin: 15px 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333333a4;
+}
+
+.table .data th {
+    font-size: 20px;
+    padding: 20pxpx 0px;
+}
+
+.table tr {
+    text-align: center;
+}
+
+.table td button {
+    border: 0;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.table td .delete {
+    color: red;
+    cursor: pointer;
+}
+
+.foot #total {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .creative-button {
+    background: whitesmoke;
+    color: goldenrod;
+    border: 2px solid transparent;
+    padding: 0px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+    outline: none;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  
+  /* Hover effect */
+  .creative-button a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: white;
+    color: goldenrod;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+  }
+  
+  .creative-button:hover a::before {
+    transform: translate(-50%, -50%) scale(1);
+    
+  }
+  
+  .creative-button a:hover {
+    color: goldenrod;
+    border-color: goldenrod;
+  }
+  
+  .creative-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   
+  }
+  
+  .creative-button span {
+    position: relative;
+    z-index: 1;
+    
+  }
+  .qty{
+    border: 1px solid rgba(90, 89, 86, 0.865);
+    border-radius: 5px;
+  }
+
+
+  @media (max-width: 767px) {
+    .logo img {
+        width: 100px;
+    }
+
+    .header .para {
+        font-size: 20px;
+    }
+
+    .head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container {
+        margin-top: 10px;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table-responsive {
+        margin-top: 20px;
+    }
+
+    .foot h3 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo img {
+        width: 130px;
+    }
+}
+
+.delete {
+    cursor: pointer;
+    color: red;
+}
+
+.qty {
+    width: 130px;
+    text-align: center;
+    font-weight: 500;
+}
