@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-9</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>For Loop</h2>
+                    <h3>input user</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // multiplication of all numbers  1 to N using for loop 
+        alert(`Multiplication of all numbers 1 to N using for loop`);
+
+        var n = parseInt(prompt("Enter Any Number :"));
+        var num = 10;
+
+        document.write(`<h2>Table Of Number</h2>`);
+
+        for (var i = 1; i <= num; i++) {
+            var result = n * i;
+
+            console.log(`Numbers :- ${result}`);
+            document.write(`<h4>${n} x ${i} = ${result}</h4>`);
+            document.write(`<br>`);
+        }
+
+
+    </script>
+    <!-- script end  -->
+</body>
+
+</html>

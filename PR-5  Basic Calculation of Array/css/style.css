@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 1400px;
+    margin: 0px auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+/* array start  */
+
+.logic {
+    padding-top: 60px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.logic h2 {
+    font-size: 30px;
+    color: rgb(3, 112, 110);
+    text-transform: uppercase;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    color: rgb(2, 69, 68);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px 0px ;
+}
+
+.logic h3 {
+    padding: 30px 0px 20px 0px;
+    font-size: 28px;
+    color: rgb(134, 122, 122);
+    text-transform: uppercase;
+    border-bottom: 2px solid gray;
+    text-align: center;
+}
+
+h4 {
+    padding: 7px;
+    font-size: 20px;
+    color: #016372;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+/* array end */

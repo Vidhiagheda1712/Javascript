@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- form start     -->
+    <h1>REGISTRATION FORM</h1>
+    <form name="RegForm" action="#" onsubmit="validateForm()">
+        <p>
+            <label for="name">Name :</label>
+            <input type="text" id="name" placeholder="Enter Your Full Name" onchange="validateForm()" />
+            <span id="nameerr" class="error-message"></span>
+        </p>
+        <p>
+            <label for="email">E-mail Address :</label>
+            <input type="text" id="email" name="EMail" placeholder="Enter Your Email" onchange="validateForm()" />
+            <span id="emailerr" class="error-message"></span>
+        </p>
+        <p>
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="Password" placeholder="Enter Any Password"
+                onchange="validateForm()" />
+            <span id="passerr" class="error-message"></span>
+        </p>
+        <p>
+            <label for="address">Address :</label>
+            <input type="text" id="address" placeholder="Enter your address" onchange="validateForm()" />
+            <span id="addresserr" class="error-message"></span>
+        </p>
+        <p>
+            <label for="subject">Select Your Course:</label>
+            <select id="subject" name="Subject" onchange="validateForm()">
+                <option value="">
+                    Select Course
+                </option>
+                <option value="BTECH">
+                    BTECH
+                </option>
+                <option value="BBA">
+                    BBA
+                </option>
+                <option value="BCA">
+                    BCA
+                </option>
+                <option value="B.COM">
+                    B.COM
+                </option>
+            </select>
+            <span id="suberr" class="error-message"></span>
+        </p>
+        <p>
+            <label for="comment">College Name:</label>
+            <textarea id="clg" name="Comment" onchange="validateForm()"></textarea>
+            <span id="clgerr" class="error-message"></span>
+        </p>
+        <p>
+            <input type="checkbox" id="agree" name="Agree" onchange="validateForm()" />
+            <label for="agree">I agree to the above
+                information</label>
+            <span id="agreeerr" class="error-message"></span>
+        </p>
+        <p>
+            <input type="submit" value="Submit" name="Submit" onclick="handleSubmit()" />
+            <input type="reset" value="Reset" name="Reset" />
+        </p>
+    </form>
+</body>
+ <!-- form end -->
+
+</html>
+<!-- script start -->
+<script type="text/javascript">
+
+    const validateForm = () => {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let address = document.getElementById("address").value;
+        let subject = document.getElementById("subject").value;
+        let collage = document.getElementById("clg").value;
+        let agree = document.getElementById("agree").checked;
+
+
+        let nameerr = document.getElementById("nameerr");
+        let emailerr = document.getElementById("emailerr");
+        let passerr = document.getElementById("passerr");
+        let addresserr = document.getElementById("addresserr");
+        let suberr = document.getElementById("suberr");
+        let clgerr = document.getElementById("clgerr");
+        let agreeerr = document.getElementById("agreeerr")
+
+        nameerr.textContent = "";
+        emailerr.textContent = "";
+        passerr.textContent = "";
+        addresserr.textContent = "";
+        suberr.textContent = "";
+        clgerr.textContent = "";
+        agreeerr.textContent = "";
+
+        if (!name || /\d/.test(name)) {
+            nameerr.textContent = "Please enter your name properly.";
+
+        }
+        if (!email || !email.includes("@")) {
+            emailerr.textContent = "Please Enter a Valid Email";
+
+        }
+        if (!password || password.length < 6) {
+            passerr.textContent = "Please enter a password with at least 6 characters.";
+
+
+        }
+        if (!address) {
+            addresserr.textContent = "Please enter your address.";
+
+
+        }
+        if (!subject) {
+            suberr.textContent = "Please select your course.";
+
+
+        }
+        if (!collage) {
+            clgerr.textContent = "Collage Name is Required";
+
+        }
+        if (!agree) {
+            agreeerr.textContent = "Please agree to the above information.";
+
+        }
+
+
+    }
+
+    const handleSubmit = () => {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let address = document.getElementById("address").value;
+        let subject = document.getElementById("subject").value;
+        let collage = document.getElementById("clg").value;
+        let agree = document.getElementById("agree").checked;
+
+        if (!name && !email && !password && !address && !subject && !collage && !agree) {
+            alert("Please Fill Your Form");
+        }
+        else {
+            alert("Your Form is Submitted Successfully!");
+
+        }
+    }
+</script>
+<!-- script end -->

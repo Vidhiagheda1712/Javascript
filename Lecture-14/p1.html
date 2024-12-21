@@ -1,0 +1,32 @@
+<h1 align="center">Parameterised Constructor</h1>
+<script type="text/javascript">
+
+    class details {
+        constructor(grid, name, phone, gender, city) {
+            this.grid = grid;
+            this.name = name;
+            this.phone = phone;
+            this.gender = gender;
+            this.city = city;
+
+        }
+
+        users() {
+            document.write(`<h2>GRID :- ${this.grid}</h2>`);
+            document.write(`<h2>Name :- ${this.name}</h2>`);
+            document.write(`<h2>Phone :- ${this.phone}</h2>`);
+            document.write(`<h2>Gender :- ${this.gender}</h2>`);
+            document.write(`<h2>City :- ${this.city}</h2>`);
+
+
+        }
+    }
+
+    let obj1 = new details(1234, "vidhi", 9852422, "female", "surat");
+    obj1.users();
+    let obj2 = new details(2563, "Ayushi", 128956, "female", "surat");
+    obj2.users();
+    let obj3 = new details(5689, "Krisha", 878956, "female", "surat");
+    obj3.users();
+
+</script>

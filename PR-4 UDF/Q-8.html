@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-8</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="UDF">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Take Nothing Return Nothing</h2>
+                    <h2> program to create basic calculator.....</h>
+                        <h3>input user</h3>
+                        <h2 id="input"></h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // program to create basic calculator using switch case
+        alert(`JavaScript program to create basic calculator using switch case`);
+        // take nothing return nothing
+        var choice = parseInt(prompt("Enter number 1 (+) \n Enter number 2 (-) \n Enter number 3(*) \n Enter number 4(/)"))
+        var a = parseInt(prompt("Enter value of A :- "));
+        var b = parseInt(prompt("Enter value of B :- "));
+
+        // function start
+        function cals() {
+
+            switch (choice) {
+                case 1:
+                    var ans = a + b;
+                    console.log("Addition a + b = " + ans);
+                    document.getElementById('input').innerHTML = "Addition  a + b  = " + ans;
+                    break;
+                case 2:
+                    var ans = a - b;
+                    console.log("Subtraction a - b = " + ans);
+                    document.getElementById('input').innerHTML = "Subtraction  a - b  = " + ans;
+                    break;
+                case 3:
+                    var ans = a * b;
+                    console.log("Multiplication a * b = " + ans);
+                    document.getElementById('input').innerHTML = "Multiplication  a * b  = " + ans;
+                    break;
+                case 4:
+                    var ans = a / b;
+                    console.log("Division a / b = " + ans);
+                    document.getElementById('input').innerHTML = "Division  a / b  = " + ans;
+                    break;
+                default:
+                    document.write(`<h2>Enter Valid Choice.....</h2>`);
+                    break;
+
+            }
+
+        }
+
+        // function end
+        cals();
+    </script>
+    <!-- script start  -->
+
+</body>
+
+</html>

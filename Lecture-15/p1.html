@@ -1,0 +1,35 @@
+<h1 align="center">Polymorphism</h1>
+<script type="text/javascript">
+    class FirstClass {
+        add() {
+            document.write(`<h2>First Method</h2>`);
+
+        }
+
+    }
+    class SecondClass extends FirstClass {
+        add() {
+            document.write(`<h2>${50 + 20}</h2>`);
+
+        }
+    }
+    class ThirdClass extends SecondClass {
+        add() {
+            document.write(`<h2>Last Method</h2>`);
+
+        }
+
+    }
+
+    function allprint() {
+        let obj1 = new FirstClass;
+        obj1.add();
+        let obj2 = new SecondClass;
+        obj2.add();
+        let obj3= new ThirdClass;
+        obj3.add();
+    }
+    allprint();
+
+
+</script>

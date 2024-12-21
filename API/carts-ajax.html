@@ -1,0 +1,172 @@
+<!-- Ajax Method -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carts - Ajax API</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 90%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #3f51b5;
+            color: white;
+        }
+        thead :hover{
+            color :#3f51b5;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            font-size: 1.1em;
+        }
+
+        td {
+            font-size: 0.95em;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+            
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        img {
+            border-radius: 5px;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 1.5em;
+            color: #3f51b5;
+        }
+
+        .no-data {
+            text-align: center;
+            font-size: 1.2em;
+            color: #d9534f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            th, td {
+                font-size: 0.85em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center" border="1" cellpadding="15">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Products</th>
+                <th>Total</th>
+                <th>Total Products</th>
+                <th>Total Quantity</th>
+                <th>DiscountedTotal</th>
+                <th>userId</th>
+            </tr>
+        </thead>
+        <tbody id="carts">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+    const viewCart = () => {
+        $.ajax({
+            method: 'GET',
+            url: 'https://dummyjson.com/carts',
+            success: function (res) {
+                let cart = res.carts;
+                console.log(cart);
+                let tbl = "";
+                cart.map((c, i) => {
+                    tbl += `
+                        <tr>
+                            <td>${c.id}</td>
+                             <td>`
+                    tbl += `
+                                <ul>`
+                    c.products.map((p) => {
+                        tbl += `
+                                     <li style ="text-align :center;">Title :- ${p.title}</li>
+                                      <li style ="text-align :center;">ID :- ${p.id} || Price :- ${p.price} || Quantity :- ${p.quantity}</li>
+                                      <li style ="text-align :center;"  ><img src =" ${p.thumbnail}" width="80px" /></li>
+                                       <li style ="text-align :center;">Total :- ${p.total}</li>
+                                         <li style ="border-bottom : 1px solid black; padding :15px 0px; text-align :center;"> Discounted Total :- ${p.discountedTotal} 
+                                        || Discount Percentage :- ${p.discountPercentage}</li>
+                                    
+                                `
+                    })
+                    tbl += `</ul>`
+
+                    tbl += `</td>
+                         
+                            <td>${c.total}</td>    
+                            <td>${c.totalProducts}</td>    
+                            <td>${c.totalQuantity}</td>    
+                            <td>${c.discountedTotal}</td>    
+                            <td>${c.userId}</td>    
+                        </tr>
+                    `
+
+                });
+                document.getElementById("carts").innerHTML = tbl;
+            }
+
+        })
+    }
+    viewCart();
+</script>

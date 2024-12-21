@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-10</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="Array">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>array ascending order sort.</h2>
+                    <h3>input user</h3>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // array ascending  order sort.
+        alert(`array ascending  order sort.`);
+
+        var size = parseInt(prompt(`Enter Array Size :-`));
+        var arr = [size];
+
+        document.write(`<h2>Array Elements</h2>`);
+        for (var i = 0; i < size; i++) {
+            arr[i] = parseInt(prompt(`Enter Element ${i + 1} :-`));
+            document.write(`<h4>${arr[i]}</h4>`);
+        }
+        document.write(`<h2>ascending order</h2>`);
+
+        let ans = arr.sort((a, b) => (a - b));
+        document.write(`<h4>${ans}</h4>`);
+    </script>
+    <!-- script end  -->
+
+</body>
+
+</html>

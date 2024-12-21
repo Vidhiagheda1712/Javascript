@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-10_2</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="UDF">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Take Something Return Nothing</h2>
+                    <h4>program to decide that you eligible for voting.....</h4>
+                    <h3>input user</h3>
+                    <h3 id="test"></h3>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // program to decide that you eligible for voting
+        alert(`JavaScript program to decide that you eligible for voting...`);
+        // take something return nothing
+
+        // function start
+        var year = parseInt(prompt("Enter your age and decide that you eligible for voting :- "));
+
+        function vote(year) {
+            if (year >= 18) {
+                console.log("your age is " + year + " so you are eligible for voting");
+                document.getElementById('test').innerHTML = "your age is " + year + " so you are eligible for voting";
+            }
+
+            else {
+                console.log("your age is " + year + " so you are not eligible for voting");
+                document.getElementById('test').innerHTML = "your age is " + year + " so you are not eligible for voting";
+            }
+
+
+        }
+
+        // function end
+        vote(year);
+    </script>
+    <!-- script start  -->
+
+</body>
+
+</html>

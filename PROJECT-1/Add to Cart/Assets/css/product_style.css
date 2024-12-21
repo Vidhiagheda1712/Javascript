@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    height: 92px;
+    width: 100%;
+    background-color: goldenrod;
+    border-radius: 3px;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    
+    padding: 28px;
+
+}
+.cart , .user{
+    margin-left: 15px;
+}
+
+.cart a i ,.user a i{
+    color: goldenrod;
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+
+.fa-solid {
+    color: goldenrod;
+
+}
+
+.cart p ,.user a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    background-color: goldenrod;
+    color: white;
+}
+
+.addcards img {
+    margin-bottom: 18px;
+}
+
+.addcards img:hover {
+    transform: scale(0.9);
+    transition: 0.5s;
+    
+}
+
+.addcards .title {
+    font-size: 15px;
+}
+
+.btn {
+    background-color: goldenrod;
+    border: none;
+    padding: 10px 85px;
+    font-weight: 500;
+    display: block;
+}
+
+.btn:hover {
+    background-color: #876000;
+    transition: 0.5s;
+}
+
+.addcards .title h2 {
+    padding: 20px 0px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .creative-button {
+    background: whitesmoke;
+    color: goldenrod;
+    border: 2px solid transparent;
+    padding: 9px 23px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+    outline: none;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  
+  /* Hover effect */
+  .creative-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: white;
+    color: goldenrod;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+  }
+  
+  .creative-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    
+  }
+  
+  .creative-button:hover {
+    color: goldenrod;
+    border-color: goldenrod;
+  }
+  
+  .creative-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   
+  }
+  
+  .creative-button span {
+    position: relative;
+    z-index: 1;
+    
+  }
+.sub a{
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        background-color: #333333;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+}

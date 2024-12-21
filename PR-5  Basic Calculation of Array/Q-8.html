@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-8</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="Array">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>all element sum</h2>
+                    <h3>input user</h3>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // all element sum.
+        alert(`all element sum.`);
+
+        var size = parseInt(prompt(`Enter Array Size :-`));
+        const arr = [size];
+        var sum = 0;
+
+        document.write(`<h2>Array Elements</h2>`);
+
+        for (var i = 0; i < size; i++) {
+            arr[i] = parseInt(prompt(`Enter Element ${i + 1} :-`));
+            document.write(`<h4>${arr[i]}</h4>`);
+        }
+        document.write(`<h2>Sum of all Elements....</h2>`);
+        for (var i = 0; i < size; i++) {
+            sum = sum + arr[i];
+        }
+        document.write(`<h4>Sum Of All Elements :- ${sum}</h4>`);
+
+
+
+    </script>
+    <!-- script end  -->
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-7</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- input user pogram start  -->
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2> Rate Of Interest</h2>
+                    
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user pogram end  -->
+    <!-- script start  -->
+    <script>
+        var p = parseInt(prompt("Enter The Value Of P :"));
+        var r = parseInt(prompt("Enter The Value Of R :"));
+        var n = parseInt(prompt("Enter The Value Of N :"));
+
+        var ans = p * r * n / 100;
+
+
+        document.getElementById(`test`).innerHTML = `Rate Of Interest : ${ans}`;
+    </script>
+    <!-- script start  -->
+
+
+</body>
+
+</html>

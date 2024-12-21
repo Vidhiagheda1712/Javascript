@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- input user pogram start  -->
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Swapping</h2>
+                 
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user pogram end  -->
+
+    
+    <!-- script start  -->
+    <script>
+
+        var a = parseInt(prompt("Enter The Value Of A :"));
+        var b = parseInt(prompt("Enter The Value Of B :"));
+
+        var swap = a;
+        a = b;
+        b = swap;
+
+        document.getElementById(`test`).innerHTML = `After Swapping : A = ${a}  B= ${b}`;
+
+
+    </script>
+    <!-- script end  -->
+
+</body>
+
+</html>

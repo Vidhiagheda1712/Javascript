@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- css link end  -->
+</head>
+
+<body>
+    <!-- input user program start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>BankAccount Details</h2>
+                    <h4 id="person"></h4>
+                    <h4 id="bank"></h4>
+                    <h4 id="dtl"></h4>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+
+    <script type="text/javascript">
+
+        class BankAccount {
+            constructor(acn, bal) {
+                this.acn = acn;
+                this.bal = bal;
+
+
+            }
+            display() {
+                document.getElementById("person").innerHTML = `Account Number :- ${this.acn}`;
+                document.getElementById("bank").innerHTML = ` Your Balance is ${this.bal}`;
+            }
+            deposite(amt) {
+                let total = this.bal += amt;
+                document.getElementById("dtl").innerHTML = `Successfully Deposited....`;
+                this.showbalance();
+
+            }
+            withdraw(amt) {
+                if (this.bal >= amt) {
+                    let total = this.bal -= amt;
+                    document.write(`<h3>Successfully Withdraw....</h3>`)
+                    this.showbalance();
+                }
+                else {
+
+                    document.write(`<h3>Insufficient Balance...</h3>`)
+                }
+            }
+            showbalance() {
+                document.write(`<h3>Balance :- ${this.bal}</h3>`)
+            }
+        }
+
+        let bank = new BankAccount(212121212, 1500);
+        bank.display();
+        bank.deposite(500);
+        bank.withdraw(400);
+
+    </script>
+    <!-- script start  -->
+</body>
+
+</html>

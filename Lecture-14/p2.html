@@ -1,0 +1,34 @@
+<h1 align="center">Inheritance</h1>
+<script type="text/javascript">
+
+    class car {
+        constructor(brand, model, year) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+
+        }
+        present() {
+            return `This car brand is ${this.brand}`
+
+        }
+    }
+
+    class model extends car {
+        constructor(brand, model, year) {
+            super(brand);
+            this.model = model;
+            this.year = year;
+
+
+        }
+        show() {
+            return `${this.present()}, its car model is ${this.model} and this car is make in ${this.year}.`
+
+        }
+    }
+
+    let mycar = new model("TATA", "Harrier", 2020)
+    // console.log(mycar.show());
+    document.write(`<h2>${mycar.show()}</h2>`)
+</script>

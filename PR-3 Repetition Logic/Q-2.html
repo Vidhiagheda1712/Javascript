@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>While Loop</h2>
+                    <h3>input user</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script>
+        // print even numbers using while loop 
+        alert(`Print Even Numbers`);
+        var num = parseInt(prompt("Enter any number :"));
+        var i = 1;
+        document.write(`<h2>Even Numbers</h2>`);
+        while (i <= num) {
+
+            if (i % 2 == 0) {
+                console.log(`Even Numbers :- ${i}`);
+
+                document.write(`<h4>${i}</h4>`);
+                document.write(`<br>`);
+
+
+            }
+            i++;            
+        }
+    </script>
+    <!-- script end  -->
+</body>
+
+</html>

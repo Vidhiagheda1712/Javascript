@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-11</title>
+
+    <!-- style css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- style css link end -->
+</head>
+
+<body>
+
+    <!-- input user pogram start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>JavaScript program to create basic calculator using ledder if else.</h2>
+                    <h3>input user</h3>
+                    <h4 id="input"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input user pogram end -->
+
+
+    <!-- script start -->
+
+    <script type="text/javascript">
+        // JavaScript program to create basic calculator using ledder if else.
+
+        // input usere program start 
+
+        alert("program to create basic calculator using ledder if else.")
+
+        var choice = parseInt(prompt("Enter number 1 (+) \n Enter number 2 (-) \n Enter number 3(*) \n Enter number 4(/)"))
+        var a = parseInt(prompt(" Addition value of a :- "));
+        var b = parseInt(prompt(" Addition value of b :- "));
+
+        if (choice == 1) {
+            var ans = a + b;
+            console.log("addition a + b = " + ans);
+            document.getElementById('input').innerHTML = "addition a + b = " + ans;
+        }
+
+        else if (choice == 2) {
+            var ans = a - b;
+            console.log("subtraction a - b = " + ans);
+            document.getElementById('input').innerHTML = "subtraction a - b = " + ans;
+        }
+
+        else if (choice == 3) {
+            var ans = a * b;
+            console.log("multiplication a * b = " + ans);
+            document.getElementById('input').innerHTML = "multiplication a * b = " + ans;
+        }
+
+        else if (choice == 4) {
+            var ans = a / b;
+            console.log("division a / b = " + ans);
+            document.getElementById('input').innerHTML = "division a / b = " + ans;
+        }
+
+        else {
+            console.log("not valid input. plese read value");
+            document.getElementById('input').innerHTML = "not valid input. please read value";
+        }
+
+        // input usere program end
+
+        // JavaScript program to create basic calculator using ledder if else.
+    </script>
+
+    <!-- script end -->
+
+</body>
+
+</html>

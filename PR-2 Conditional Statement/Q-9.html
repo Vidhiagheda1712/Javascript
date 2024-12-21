@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-9</title>
+
+    <!-- style css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- style css link end -->
+</head>
+
+<body>
+
+    <!-- input user pogram start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>JavaScript program to find max of 5 number using nested if.</h2>
+                    <h3>input user</h3>
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input user pogram end -->
+
+
+    <!-- script start -->
+
+    <script type="text/javascript">
+        // JavaScript program to find max of 5 number using nested if.
+
+        // input usere program start 
+
+        alert("program to find max of 5 number using nested if")
+
+        var a = parseInt(prompt("Enter value of a :- "));
+        var b = parseInt(prompt("Enter value of b :- "));
+        var c = parseInt(prompt("Enter value of c :- "));
+        var d = parseInt(prompt("Enter value of d :- "));
+        var e = parseInt(prompt("Enter value of e :- "));
+
+        // var a = 25 , b = 30 , c = 25 , d = 40 ;
+
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {
+                    if (a > e) {
+                        console.log("value number " + "a ( " + a + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "a ( " + a + " ) is big ";
+                    }
+                    else {
+                        console.log("value number " + "e ( " + e + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "d ( " + e + " ) is big ";
+                    }
+                }
+            }
+        }
+
+        else {
+            if (b > c) {
+                if (b > d) {
+                    if (b > e) {
+                        console.log("value number " + "b ( " + b + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "b ( " + b + " ) is big ";
+                    }
+                    else {
+                        console.log("value number " + "e ( " + e + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "e ( " + e + " ) is big ";
+                    }
+                }
+            }
+            else {
+                if (c > d) {
+                    if (c > e) {
+                        console.log("value number " + "c ( " + c + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "c ( " + c + " ) is big ";
+                    }
+                    else {
+                        console.log("value number " + "d ( " + e + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "e ( " + e + " ) is big ";
+                    }
+                }
+                else {
+                    if(d > e) {
+                        console.log("value number " + "d ( " + d + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "d ( " + d + " ) is big ";
+                    }
+                    else {
+                        console.log("value number " + "e ( " + e + " ) is big");
+                        document.getElementById('test').innerHTML = " value number " + "e ( " + e + " ) is big ";
+                    }
+                }
+            }
+        }
+
+        // input usere program end
+
+        // JavaScript program to find max of 4 number using nested if.
+    </script>
+
+    <!-- script end -->
+
+</body>
+
+</html>

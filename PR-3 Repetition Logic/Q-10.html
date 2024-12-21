@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-10</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>While Loop</h2>
+                    <h3>input user</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // factorial of numbers  1 to N using while loop 
+        alert(`Factorial Of Number using while loop`);
+
+        var n = parseInt(prompt("Enter Any Number :"));
+        var i = 1;
+        var fact = 1;
+
+
+        while (i <= n) {
+            fact *= i;
+            i++;
+        }
+        console.log(`Numbers :- ${fact}`);
+        document.write(`<h2>Factorial Of Number :- ${fact}</h2>`);
+    </script>
+    <!-- script end  -->
+</body>
+
+</html>

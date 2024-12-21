@@ -1,0 +1,72 @@
+<table border="1" align="center" cellpadding="15">
+    <h2 align="center">DATA</h2>
+    <thead>
+        <td>No.</td>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Phone</td>
+
+    <tbody id="record">
+
+    </tbody>
+    </thead>
+</table>
+
+<script type="text/javascript">
+    class Demo {
+        constructor() {
+            this.a = 40;
+            this.b = 20;
+            this.data = [
+                {
+                    No: 1,
+                    ID: 7535,
+                    Name: "Krisha",
+                    Phone: 12345,
+                },
+                {
+                    No: 2,
+                    ID: 2546,
+                    Name: "Vidhi",
+                    Phone: 98564,
+                },
+                {
+                    No: 3,
+                    ID: 3789,
+                    Name: "Ayushi",
+                    Phone: 22356,
+                },
+
+            ]
+        }
+
+        sum() {
+            document.write(`<h1>Sum :- ${this.a + this.b}</h1>`);
+
+        }
+
+        details() {
+            let tbl = ""
+            this.data.map((val, index) => {
+                tbl += `
+                  <tr>
+                    <td>${val.No}</td>
+                    <td>${val.ID}</td>
+                    <td>${val.Name}</td>
+                    <td>${val.Phone}</td>
+                    
+                    </tr>
+               `
+            });
+            document.getElementById("record").innerHTML = tbl;
+        }
+
+
+
+    }
+    let obj = new Demo;
+    obj.sum();
+    obj.details();
+
+
+</script>

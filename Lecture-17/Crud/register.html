@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div align="center" class="main">
+        <h2 style="color:teal">Register User</h2>
+        <form>
+            <table border="1" cellpadding="7">
+                <tr>
+                    <td>
+                        <label for="name">Name :</label><br>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email :</label><br>
+                        <input type="email" name="email" id="email">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Phone :</label><br>
+                        <input type="phone" name="phone" id="phone">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password :</label><br>
+                        <input type="password" name="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input onclick="registerUser()" type="button" value="Submit">
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div align="center" class="sub">
+        <a href="./index.html">Register Now</a>
+    </div>
+    <script type="text/javascript" src="./register.js"></script>
+
+</body>
+
+</html>

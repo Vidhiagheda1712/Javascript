@@ -1,0 +1,104 @@
+<!-- Fetch API - Comments-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments - Fetch API</title>
+
+    <style>
+     
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+    
+        table {
+            width: 90%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.306);
+            background-color: #ffffff;
+        }
+
+        th, td {
+            padding:15px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 500;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        th {
+            background-color: #043c44;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        td {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover td {
+            background-color: #eaeaea;
+        }
+
+     
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table align="center" border="1" cellpadding="15">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Body</th>
+                <th>Likes</th>
+                <th>postId</th>
+            </tr>
+        </thead>
+        <tbody id="comments">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    const viewComments = () => {
+        fetch('https://dummyjson.com/comments')
+            .then(com => com.json())
+            
+            .then((c) => {
+                let comments = c.comments;
+                console.log(comments);
+
+                let tbl = "";
+                comments.map((c, i) => {
+                    tbl += `
+                      <tr>
+                         <td>${c.id}</td>
+                         <td>${c.body}</td>
+                         <td>${c.likes}</td>
+                         <td>${c.postId}</td>
+                        </tr>
+                       `
+                })
+                document.getElementById("comments").innerHTML = tbl;
+
+            })
+    }
+    viewComments();
+</script>

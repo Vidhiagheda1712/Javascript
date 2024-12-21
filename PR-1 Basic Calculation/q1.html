@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- input user pogram start  -->
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Basic Calculation</h2>
+                
+                    <h4 id="test"></h4>
+                    <h4 id="sub"></h4>
+                    <h4 id="mul"></h4>
+                    <h4 id="div"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user pogram end  -->
+
+    <h1 id="swap"></h1>
+    <!-- script start  -->
+    <script>
+        var a = parseInt(prompt("Enter The Value Of A :"));
+        var b = parseInt(prompt("Enter The Value Of B :"));
+
+        document.getElementById('test').innerHTML = `Addition = ${a + b }`;
+        document.getElementById('sub').innerHTML = `Subtraction = ${a - b }`;
+        document.getElementById('mul').innerHTML = `Multiplication = ${a * b }`;
+        document.getElementById('div').innerHTML = `Division = ${a / b }`;
+    </script>
+    <!-- script end  -->
+
+</body>
+
+</html>

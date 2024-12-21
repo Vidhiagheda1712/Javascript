@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-9_1</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="UDF">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Take Nothing Return Nothing</h2>
+                    <h4>program to input angles of a triangle and check whether triangle is valid or not......</h4>
+                    <h3>input user</h3>
+                    <h2 id="input"></h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // program to input angles of a triangle and check whether triangle is valid or not.
+        alert(`JavaScript program to input angles of a triangle and check whether triangle is valid or not..`);
+        // take nothing return nothing
+        var a = parseInt(prompt("Enter value of First Side :- "));
+        var b = parseInt(prompt("Enter value of Second Side :- "));
+        var c = parseInt(prompt("Enter value of Third Side :- "));
+
+        // function start
+        function triangle() {
+            var ans = a + b + c;
+            console.log(ans);
+
+            if (ans == 180) {
+
+                console.log("triangle is valid");
+                document.getElementById('input').innerHTML = "triangle is valid...";
+            }
+
+            else {
+                console.log("triangle is not valid");
+                document.getElementById('input').innerHTML = "triangle is not valid....";
+            }
+
+
+        }
+
+        // function end
+        triangle();
+    </script>
+    <!-- script start  -->
+
+</body>
+
+</html>

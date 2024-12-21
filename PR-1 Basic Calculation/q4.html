@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- input user pogram start  -->
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Base Salary</h2>
+                    
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user pogram end  -->
+    <!-- script start  -->
+    <script>
+        var bs = parseInt(prompt("Enter The Value Of BS :"));
+        var hra = parseInt(prompt("Enter The Value Of HRA :"));
+        var da = parseInt(prompt("Enter The Value Of DA :"));
+        var ta = parseInt(prompt("Enter The Value Of TA :"));
+
+
+        hra = (bs * hra) / 100;
+        da = (bs * da) / 100;
+        ta = (bs * ta) / 100;
+        var ans = bs + hra + ta + da;
+
+
+        document.getElementById(`test`).innerHTML = `Base Salary : ${ans}`;
+    </script>
+    <!-- script start  -->
+
+
+</body>
+
+</html>

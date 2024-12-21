@@ -1,0 +1,186 @@
+<!-- Fetch API -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Fetch API</title>
+    <style>
+     
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
+        }
+
+  
+        th {
+            background-color: #6c757d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+     
+        td {
+            padding: 10px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 500;
+            border-bottom: 1px solid #ddd;
+        }
+
+     
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        td img {
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+     
+        ol, ul {
+            text-align: left;
+            margin: 0;
+            padding: 15px;
+        }
+           li{
+            padding:2px;
+
+           }
+      
+        td.empty {
+            color: #bbb;
+        }
+
+        @media screen and (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 12px;
+            }
+
+            td, th {
+                padding: 8px;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <table align="center" border="1" cellpadding="15">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Ingredients</th>
+                <th>Cuisine </th>
+                <th>MealType </th>
+                <th>Tags</th>
+                <th>prepTimeMinutes </th>
+                <th>caloriesPerServing</th>
+                <th>cookTimeMinutes</th>
+                <th>Rating </th>
+
+
+            </tr>
+        </thead>
+        <tbody id="recipe">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    const viewRecipes = () => {
+        fetch('https://dummyjson.com/recipes')
+            .then(rec => rec.json())
+            .then((r) => {
+                let recipe = r.recipes;
+                console.log(recipe);
+
+                let tbl = "";
+                recipe.map((r, i) => {
+                    tbl += `
+                      <tr>
+                          <td>${r.id}</td>
+                            <td>${r.name}</td>
+                            <td><img src = "${r.image}" width ="100px"/></td>
+                              <td>`
+                    tbl += `
+                                <ol>`
+                    r.ingredients.map((i) => {
+                        tbl += `
+                                   <li>${i}</li> 
+                                    
+                                `
+                    })
+                    tbl += `</ol>`
+
+                    tbl += `</td>
+                         <td>${r.cuisine}</td>
+                         <td>
+                         `
+                         r.mealType.map((m) => {
+                        tbl += `
+                                   <li>${m}</li> 
+                                    
+                                `
+                    })
+                    tbl += `</ul>`
+
+                    tbl += `</td>
+                        <td>`
+                            tbl += `
+                                <ul>`
+                    r.tags.map((t) => {
+                        tbl += `
+                                   <li>${t}</li> 
+                                    
+                                `
+                    })
+                    tbl += `</ul>`
+
+                    tbl += `</td>
+                    <td>${r.prepTimeMinutes}</td>
+                    <td>${r.caloriesPerServing}</td>
+                    <td>${r.cookTimeMinutes}</td>
+                    <td>${r.rating}</td>
+                    </tr >
+  
+                        `
+                })
+                document.getElementById("recipe").innerHTML = tbl;
+
+            })
+    }
+
+
+    viewRecipes();
+</script>

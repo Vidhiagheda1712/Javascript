@@ -1,0 +1,120 @@
+<!-- Ajax API - Comments -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments - Ajax API</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding:15px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        th {
+            background-color: #b65249ec;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        td {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+
+        tr:hover td {
+            background-color: #e0d4d4;
+        }
+
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <table align="center" border="1" cellpadding="15">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Body</th>
+                <th>Likes</th>
+                <th>postId</th>
+
+            </tr>
+        </thead>
+        <tbody id="comments">
+
+        </tbody>
+    </table>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+    const viewComment = () => {
+     
+        $.ajax({
+            method: 'GET',
+            url: 'https://dummyjson.com/comments',
+            success: function (c) {
+                let comments = c.comments;
+                console.log(comments);
+
+                let tbl = "";
+                comments.map((c, i) => {
+                    tbl += `
+                       <tr>
+                         <td>${c.id}</td>
+                         <td>${c.body}</td>
+                         <td>${c.likes}</td>
+                         <td>${c.postId}</td>
+                        </tr>
+                       `
+
+                });
+                document.getElementById("comments").innerHTML = tbl;
+            }
+
+        })
+    }
+    
+     viewComment();
+</script>

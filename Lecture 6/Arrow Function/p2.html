@@ -1,0 +1,14 @@
+<script>
+
+    var swap = () => {
+        var swap = a;
+        a = b;
+        b = swap;
+        document.write(`<h2>A :- ${a}</h2>`);
+        document.write(`<h2>B :- ${b}</h2>`);
+
+    }
+    var a = parseInt(prompt(`Enter A :-`));
+    var b = parseInt(prompt(`Enter B :-`));
+    swap();
+</script>

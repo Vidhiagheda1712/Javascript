@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+    <!-- css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css link end -->
+</head>
+
+<body>
+
+    <!-- input user program start  -->
+
+    <section class="Array">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>Find Negetive Elements in Array.</h2>
+                    <h3>input user</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- input user program end -->
+    <!-- script start  -->
+    <script type="text/javascript">
+        // find negetive elements in array.
+        alert(`find negetive elements in array.`);
+
+        var size = parseInt(prompt(`Enter Array Size :-`));
+        var arr = [size];
+
+        document.write(`<h2>Array Elements</h2>`);
+        for (var i = 0; i < size; i++) {
+            arr[i] = parseInt(prompt(`Enter Element ${i + 1} :-`));
+            document.write(`<h4>${arr[i]}</h4>`);
+        }
+        document.write(`<h2>Negetive Elements of Array</h2>`);
+        for (var i = 0; i < size; i++) {
+            if (arr[i] < 0) {
+                document.write(`<h4>${arr[i]}</h4>`);
+            }
+
+        }
+
+    </script>
+    <!-- script end  -->
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-4</title>
+
+    <!-- style css link start  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- style css link end -->
+</head>
+
+<body>
+
+    <!-- input user pogram start  -->
+
+    <section class="Repetition-logic">
+        <div class="container">
+            <div class="row">
+                <div class="logic">
+                    <h2>JavaScript program to find which number is greter in 4 numbers using ledder if else.</h2>
+                    <h3>input user</h3>
+                    <h4 id="test"></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input user pogram end -->
+
+
+    <!-- script start -->
+
+    <script type="text/javascript">
+        // JavaScript program to find which number is greter in 4 numbers using ledder if else.
+
+        // input usere program start 
+
+        alert("program find which number is greter in 4 numbers")
+
+        var a = parseInt(prompt("Enter value of a :- "));
+        var b = parseInt(prompt("Enter value of b :- "));
+        var c = parseInt(prompt("Enter value of c :- "));
+        var d = parseInt(prompt("Enter value of d :- "));
+
+        if (a == b && b == c && c == d) {
+            console.log('all are same');
+            document.getElementById('test').innerHTML = "all are same";
+        }
+
+        else {
+            if (a >= b && a >= c && a >= d) {
+                console.log('a ( ' + a + " ) is big");
+                document.getElementById('test').innerHTML =  'a ( ' + a + " ) is big";
+            }
+
+            else if (b >= a && b >= c && b >= d) {
+                console.log('a ( ' + b + " ) is big");
+                document.getElementById('test').innerHTML = 'b ( ' + b + " ) is big";
+            }
+
+            else if (c >= a && c >= b && c >= d) {
+                console.log('a ( ' + c + " ) is big");
+                document.getElementById('test').innerHTML = 'c ( ' + c + " ) is big";
+            }
+
+            else if (d >= a && d >= b && d >= c) {
+                console.log('a ( ' + d + " ) is big");
+                document.getElementById('test').innerHTML = 'd ( ' + d + " ) is big";
+            }
+        }
+
+        // input usere program end
+
+        // JavaScript program to find which number is greter in 4 numbers using ledder if else.
+
+    </script>
+
+    <!-- script end -->
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.sub {
+    margin: 15px 0px;
+}
+
+.main .btn {
+    margin: 20px 0px;
+}
