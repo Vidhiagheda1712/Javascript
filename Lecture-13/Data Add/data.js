@@ -19,11 +19,8 @@ class Demo {
                 Name: "Ayushi",
                 Phone: 22356,
             },
-
         ]
     }
-
-
 
     details() {
         let tbl = "";
@@ -34,33 +31,30 @@ class Demo {
                 <td>${val.ID}</td>
                 <td>${val.Name}</td>
                 <td>${val.Phone}</td>
-                </tr>
+              </tr>
+
            `
+
         });
         document.getElementById("record").innerHTML = tbl;
     }
 
-    addRecord(data) {
-        this.data.push(obj);
-        alert(`Data Add Successfully....!`);
+    addRecord(add) {
+        this.data.push(add); 
+        alert(`Data Added Successfully....!`);
         this.details();
     }
-
-
 }
+
 let obj = new Demo;
 obj.details();
 
-
-
 const adddata = () => {
-    let obj = {
+    let newRecord = {
         No: 4,
-        ID: 4,
+        ID: Date.now(),
         Name: "Krishna",
         Phone: 125633,
     }
-    obj.addRecord();
-
+    obj.addRecord(newRecord); 
 }
-
